@@ -1,4 +1,5 @@
-let n = 0;
+let n = 16;
+createGrid(n)
 
 function prom() {
     const grid = document.getElementById('grid')
