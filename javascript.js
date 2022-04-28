@@ -1,8 +1,10 @@
 const grid = document.querySelector('#grid');
-let x = 16;
+let n = 16;
 
-for (let i = 0; i < x**2; i++) {
+for (let i = 0; i < n**2; i++) {
     var div = document.createElement('div');
-    //div.classList.add('pixel');
-    grid.appendChild(div)
-}
+    grid.appendChild(div);
+    div.addEventListener('mousemove', (e) => {
+        e.target.style.backgroundColor = 'black';
+    });
+};
