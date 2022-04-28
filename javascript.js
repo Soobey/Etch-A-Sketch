@@ -21,11 +21,16 @@ function createGrid(n) {
     const grid = document.querySelector('#grid');
     grid.setAttribute('style', 'border: solid black 1px; display: flex; max-width: 1000px; flex-wrap: wrap;')
 
+    let mousepress = false;
     for (let i = 0; i < n**2; i++) {
         var div = document.createElement('div');
         grid.appendChild(div);
+        div.addEventListener('mousedown', () => mousepress = true);
+        div.addEventListener('mouseup', () => mousepress = false);
         div.addEventListener('mousemove', (e) => {
-            e.target.style.backgroundColor = 'black';
+            if (mousepress === true) {
+                e.target.style.backgroundColor = 'black';
+            }
         });
         div.style.width = 1000/n + 'px';
         div.style.height = 1000/n + 'px';
