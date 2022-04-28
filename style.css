@@ -1,8 +1,0 @@
-#grid div {
-    border: solid black 1px;
-}
-#grid {
-    display: flex;
-    max-width: 1000px;
-    flex-wrap: wrap;
-}
